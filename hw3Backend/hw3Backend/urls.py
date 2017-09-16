@@ -19,6 +19,6 @@ from django.conf.urls import url, include
 from authenticationDemo import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
     url(r'^$', views.LoginView.as_view(),name='login'),
 ]

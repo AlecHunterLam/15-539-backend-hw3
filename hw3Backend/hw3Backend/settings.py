@@ -54,7 +54,7 @@ ROOT_URLCONF = 'hw3Backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['authenticationDemo/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
