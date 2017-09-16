@@ -3,11 +3,25 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.views.generic import TemplateView
+from .models import *
 import math
+
+from django.contrib.auth.models import User
 
 # Create your views here.
 class LoginView(TemplateView):
     def get(self,request):
+<<<<<<< HEAD
+        # user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+        # user2 = User.objects.create_user('myusername2', 'myemai2@crazymail.com', 'mypassword2')
+
+        users = User.objects.all
+        return render(request, 'authenticationDemo/index.html', {"users": users})
+    def post(self,request):
+        username = request.POST["username"]
+        password = request.POST["password"]
+=======
         return render(request, 'authenticationDemo/index.html')
     def post(self,request): 
+>>>>>>> 8e2641b791a78dbd631843ef9d91fd4a42371eb5
         return render(request,"authenticationDemo/index.html")
