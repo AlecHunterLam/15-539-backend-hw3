@@ -4,14 +4,9 @@
   <title>User Profile</title>
 </head>
 <body>
-  {% if user.is_authenticated %}
-    <h1 style="color: green;">Success.</h1>
-    <p>Username: {% user.username %}</p>
-    <p>Password: {% user.password %}</p>
-    <p>Email: {% user.email %}</p>
-    <!-- <p>Email Verified: {# user.verified #}</p> -->
-  {% else %}
-    {% include 'index' %}
-  {% endif %}
+  <h1 style="color: green;">Success.</h1>
+  <p>Username: {{ username }}</p>
+  <p>Password: {{ password }}</p>
+  <p>Email: {{ email }}</p>
 </body>
 </html>
