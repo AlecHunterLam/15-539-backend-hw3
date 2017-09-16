@@ -7,14 +7,18 @@
 
   <body>
     <h1>Login</h1>
-    <form method="POST" action="">
+    <form method="post">
     	{% csrf_token %}
     	<p>Username</p>
     	<input type="text" name="username">
     	<p>Password</p>
     	<input type="password" name="password">
-    	<input type="submit" name="login">
+    	<input type="submit" name="login" value="Submit">
     </form>
+
+    {% for user in users%}
+      <p>{{user.username }}</p>
+    {% endfor%}
   </body>
 
 
