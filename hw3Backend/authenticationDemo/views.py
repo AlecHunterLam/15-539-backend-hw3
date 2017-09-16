@@ -11,6 +11,8 @@ from django.contrib.auth.models import User
 # Create your views here.
 class LoginView(TemplateView):
     def get(self,request):
+        # user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+        # user2 = User.objects.create_user('myusername2', 'myemai2@crazymail.com', 'mypassword2')
         users = User.objects.all
         return render(request, 'authenticationDemo/index.html', {"users": users})
 

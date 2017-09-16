@@ -7,8 +7,14 @@
 
   <body>
     <h1>Login</h1>
+<<<<<<< HEAD
+    {% csrf_token %}
+    <form method="POST" action="">
+      {% csrf_token %}
+=======
     <form method="post">
     	{% csrf_token %}
+>>>>>>> 528604adf686c3533a8af5ca32019ee0d589a785
     	<p>Username</p>
     	<input type="text" name="username">
     	<p>Password</p>
@@ -16,6 +22,7 @@
     	<p>Email</p>
     	<input type="email" name="email">
     	<input type="submit" name="login" value="Submit">
+      {% csrf_token %}
     </form>
 
     {% for user in users %}
