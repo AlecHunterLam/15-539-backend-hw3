@@ -13,6 +13,7 @@ class LoginView(TemplateView):
     def get(self,request):
         users = User.objects.all
         return render(request, 'authenticationDemo/index.html', {"users": users})
+
     def post(self,request):
         username = request.POST["username"]
         password = request.POST["password"]
