@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+</head>
+<body>
+  {% if user.is_authenticated %}
+    <h1 style="color: green;">Success.</h1>
+    <p>Username: {% user.username %}</p>
+    <p>Hashword: {% user.password %}</p>
+    <p>Email: {% user.email %}</p>
+    <!-- <p>Email Verified: {# user.verified #}</p> -->
+  {% else %}
+    {% include 'index' %}
+  {% endif %}
+</body>
+</html>
