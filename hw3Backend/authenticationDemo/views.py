@@ -9,5 +9,5 @@ import math
 class LoginView(TemplateView):
     def get(self,request):
         return render(request, 'authenticationDemo/index.html')
-    def post(self,request):
+    def post(self,request): 
         return render(request,"authenticationDemo/index.html")
