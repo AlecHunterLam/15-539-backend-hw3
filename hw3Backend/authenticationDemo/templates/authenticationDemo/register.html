@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <h1>Login</h1>
+    <h1>Register</h1>
     {% csrf_token %}
     <form method="POST" action="">
       {% csrf_token %}
@@ -14,16 +14,15 @@
     	<input type="text" name="username">
     	<p>Password</p>
     	<input type="password" name="password">
-    	<p>Email</p>
+      <p>Recovery Email</p>
     	<input type="email" name="email">
-    	<input type="submit" name="login" value="Submit">
+
+    	<input type="submit" name="register" value="Submit Register">
       {% csrf_token %}
     </form>
 
-    <a href="/register/">Register</a>
-    {% for user in users%}
-      <p>{{user.username }}</p>
-    {% endfor%}
+    <a href="..">Login Page</a>
+
   </body>
 
 

@@ -21,4 +21,5 @@ from authenticationDemo import views
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^$', views.LoginView.as_view(),name='login'),
+    url(r'^register/', views.RegisterView.as_view(),name='register')
 ]
