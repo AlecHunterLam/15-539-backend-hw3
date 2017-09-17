@@ -25,5 +25,7 @@ urlpatterns = [
     # Login URL
     url(r'^$', views.LoginView.as_view(),name='login'),
     # Registration URL
-    url(r'^register/', views.RegisterView.as_view(),name='register')
+    url(r'^register/', views.RegisterView.as_view(),name='register'),
+    # rest_framework
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
