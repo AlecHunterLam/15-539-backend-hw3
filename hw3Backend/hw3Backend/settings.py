@@ -100,7 +100,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'authenticationDemo.User',
+=======
+AUTH_USER_MODEL = 'authenticationDemo.User'
+>>>>>>> 46348a888dc5f8b0897d407893dd04a699407780
 
 
 # Internationalization
