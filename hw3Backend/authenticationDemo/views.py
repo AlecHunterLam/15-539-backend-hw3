@@ -9,6 +9,9 @@ from django.shortcuts import *
 from django.contrib.auth import authenticate, login
 from .models import User
 
+# Tokens
+from rest_framework.authtoken.models import Token
+
 # View for logging into the application
 class LoginView(TemplateView):
     # GET
@@ -55,5 +58,7 @@ class RegisterView(TemplateView):
             return render(request,"authenticationDemo/register.html",{"error":errorMessage})
         # Save user into database
         user = User.objects.create_user(username, email, password)
+        # Set token for the new user
+        Token.objects.create(user=user)
         # Redirect to login page after successful account creation
         return redirect("../..", {"users":users})
