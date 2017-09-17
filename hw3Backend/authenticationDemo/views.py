@@ -39,7 +39,8 @@ class RegisterView(TemplateView):
         username = request.POST["username"]
         password = request.POST["password"]
         email = request.POST["email"]
-        if username == None or password == None or email == None:
+        print(type(password) )
+        if username == "" or password == "" or email == "":
             errorMessage = 'Invalid Input for User Credentials.'
             return render(request,"authenticationDemo/register.html",{"error":errorMessage})
 
