@@ -9,6 +9,8 @@ import math
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 
+
+
 # Create your views here.
 class LoginView(TemplateView):
     def get(self,request):
