@@ -18,8 +18,12 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from authenticationDemo import views
 
+# URLS for authentication app
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
+
+    # Login URL
     url(r'^$', views.LoginView.as_view(),name='login'),
+    # Registration URL
     url(r'^register/', views.RegisterView.as_view(),name='register')
 ]

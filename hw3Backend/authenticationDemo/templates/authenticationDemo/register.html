@@ -6,12 +6,14 @@
   </head>
 
   <body>
+    <!-- Error Message Display -->
     {% if error %}
       {{error}}
     {% endif %}
-    
+
     <h1>Register</h1>
     {% csrf_token %}
+    <!-- Registration Form -->
     <form method="POST" action="">
       {% csrf_token %}
     	<p>Username</p>
@@ -25,6 +27,7 @@
       {% csrf_token %}
     </form>
 
+    <!-- Link back to the login page -->
     <a href="..">Login Page</a>
 
   </body>
