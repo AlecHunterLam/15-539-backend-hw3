@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'authenticationDemo.apps.AuthenticationdemoConfig',
-    'authenticationDemo.models.User',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -101,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'authenticationDemo.models.User',
+AUTH_USER_MODEL = 'authenticationDemo.User',
 
 
 # Internationalization
